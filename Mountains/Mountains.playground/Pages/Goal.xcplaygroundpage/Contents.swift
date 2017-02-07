@@ -16,82 +16,14 @@ import PlaygroundSupport
 // Create a new canvas
 let canvas = Canvas(width: 300, height: 300)
 
-//draw a line of dots 
-canvas.drawEllipse(centreX: 0, centreY: 300, width: 3, height: 3)
-canvas.drawEllipse(centreX: 25, centreY: 300, width: 3, height: 3)
-canvas.drawEllipse(centreX: 50, centreY: 300, width: 3, height: 3)
-canvas.drawEllipse(centreX: 75, centreY: 300, width: 3, height: 3)
-canvas.drawEllipse(centreX: 100, centreY: 300, width: 3, height: 3)
-canvas.drawEllipse(centreX: 125, centreY: 300, width: 3, height: 3)
-canvas.drawEllipse(centreX: 150, centreY: 300, width: 3, height: 3)
-canvas.drawEllipse(centreX: 175, centreY: 300, width: 3, height: 3)
-canvas.drawEllipse(centreX: 200, centreY: 300, width: 3, height: 3)
-canvas.drawEllipse(centreX: 225, centreY: 300, width: 3, height: 3)
-canvas.drawEllipse(centreX: 250, centreY: 300, width: 3, height: 3)
-canvas.drawEllipse(centreX: 275, centreY: 300, width: 3, height: 3)
-canvas.drawEllipse(centreX: 300, centreY: 300, width: 3, height: 3)
+//draw the dots
+for x in stride(from: 0, to: 300, by: 25){
+    for y in stride(from: 300, to: 0, by: -25){
+        canvas.drawEllipse(centreX: x, centreY: y, width: 1, height: 1)
+    }
+}
+ 
 
-//draw the second line of dots
-canvas.drawEllipse(centreX: 0, centreY: 275, width: 3, height: 3)
-canvas.drawEllipse(centreX: 25, centreY: 275, width: 3, height: 3)
-canvas.drawEllipse(centreX: 50, centreY: 275, width: 3, height: 3)
-canvas.drawEllipse(centreX: 75, centreY: 275, width: 3, height: 3)
-canvas.drawEllipse(centreX: 100, centreY: 275, width: 3, height: 3)
-canvas.drawEllipse(centreX: 125, centreY: 275, width: 3, height: 3)
-canvas.drawEllipse(centreX: 150, centreY: 275, width: 3, height: 3)
-canvas.drawEllipse(centreX: 175, centreY: 275, width: 3, height: 3)
-canvas.drawEllipse(centreX: 200, centreY: 275, width: 3, height: 3)
-canvas.drawEllipse(centreX: 225, centreY: 275, width: 3, height: 3)
-canvas.drawEllipse(centreX: 250, centreY: 275, width: 3, height: 3)
-canvas.drawEllipse(centreX: 275, centreY: 275, width: 3, height: 3)
-canvas.drawEllipse(centreX: 300, centreY: 275, width: 3, height: 3)
 
-//draw the third line of dots
-canvas.drawEllipse(centreX: 0, centreY: 250, width: 3, height: 3)
-canvas.drawEllipse(centreX: 25, centreY: 250, width: 3, height: 3)
-canvas.drawEllipse(centreX: 50, centreY: 250, width: 3, height: 3)
-canvas.drawEllipse(centreX: 75, centreY: 250, width: 3, height: 3)
-canvas.drawEllipse(centreX: 100, centreY: 250, width: 3, height: 3)
-canvas.drawEllipse(centreX: 125, centreY: 250, width: 3, height: 3)
-canvas.drawEllipse(centreX: 150, centreY: 250, width: 3, height: 3)
-canvas.drawEllipse(centreX: 175, centreY: 250, width: 3, height: 3)
-canvas.drawEllipse(centreX: 200, centreY: 250, width: 3, height: 3)
-canvas.drawEllipse(centreX: 225, centreY: 250, width: 3, height: 3)
-canvas.drawEllipse(centreX: 250, centreY: 250, width: 3, height: 3)
-canvas.drawEllipse(centreX: 275, centreY: 250, width: 3, height: 3)
-canvas.drawEllipse(centreX: 300, centreY: 250, width: 3, height: 3)
 
-//draw the fourth line of dots
-canvas.drawEllipse(centreX: 0, centreY: 225, width: 3, height: 3)
-canvas.drawEllipse(centreX: 25, centreY: 225, width: 3, height: 3)
-canvas.drawEllipse(centreX: 50, centreY: 225, width: 3, height: 3)
-canvas.drawEllipse(centreX: 75, centreY: 225, width: 3, height: 3)
-canvas.drawEllipse(centreX: 100, centreY: 225, width: 3, height: 3)
-canvas.drawEllipse(centreX: 125, centreY: 225, width: 3, height: 3)
-canvas.drawEllipse(centreX: 150, centreY: 225, width: 3, height: 3)
-canvas.drawEllipse(centreX: 175, centreY: 225, width: 3, height: 3)
-canvas.drawEllipse(centreX: 200, centreY: 225, width: 3, height: 3)
-canvas.drawEllipse(centreX: 225, centreY: 225, width: 3, height: 3)
-canvas.drawEllipse(centreX: 250, centreY: 225, width: 3, height: 3)
-canvas.drawEllipse(centreX: 275, centreY: 225, width: 3, height: 3)
-canvas.drawEllipse(centreX: 300, centreY: 225, width: 3, height: 3)
-
-//draw the fifth line of dots
-canvas.drawEllipse(centreX: 0, centreY: 200, width: 3, height: 3)
-canvas.drawEllipse(centreX: 25, centreY: 200, width: 3, height: 3)
-canvas.drawEllipse(centreX: 50, centreY: 200, width: 3, height: 3)
-canvas.drawEllipse(centreX: 75, centreY: 200, width: 3, height: 3)
-canvas.drawEllipse(centreX: 100, centreY: 200, width: 3, height: 3)
-canvas.drawEllipse(centreX: 125, centreY: 200, width: 3, height: 3)
-canvas.drawEllipse(centreX: 150, centreY: 200, width: 3, height: 3)
-canvas.drawEllipse(centreX: 175, centreY: 200, width: 3, height: 3)
-canvas.drawEllipse(centreX: 200, centreY: 200, width: 3, height: 3)
-canvas.drawEllipse(centreX: 225, centreY: 200, width: 3, height: 3)
-canvas.drawEllipse(centreX: 250, centreY: 200, width: 3, height: 3)
-canvas.drawEllipse(centreX: 275, centreY: 200, width: 3, height: 3)
-canvas.drawEllipse(centreX: 300, centreY: 200, width: 3, height: 3)
-
-//draw the sixth line of dots
-//: ## Template code
-//: The code below is necessary to see the result of your work in the Assistant Editor at right. Please do not remove.
 PlaygroundPage.current.liveView = canvas.imageView
