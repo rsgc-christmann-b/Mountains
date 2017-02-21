@@ -16,72 +16,107 @@ import PlaygroundSupport
 // Create a new canvas
 let canvas = Canvas(width: 300, height: 300)
 
-//draw the dots
-for x in stride(from: 0, to: 300, by: 25){
-    for y in stride(from: 300, to: 0, by: -25){
-        canvas.drawEllipse(centreX: x, centreY: y, width: 1, height: 1)
-    }
+// draw dots
+let height = canvas.height
+let width = canvas.width
+
+for xPos in 0...12 {
+        for yPos in 0...12{
+                canvas.drawEllipse(centreX: width / 12 * xPos, centreY: height / 12 * yPos, width: 2, height: 2)
+            }
 }
 
+// Big Mountain Rectangle
 
-//big grey rectangle
 canvas.drawShapesWithBorders = false
 canvas.fillColor = Color(hue: 0, saturation: 000, brightness: 70, alpha: 100)
 canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: 0, width: 300, height: 150)
 
+// first Big peak
 
-//smaller black rectangle
-canvas.drawShapesWithBorders = false
-canvas.fillColor = Color(hue: 0, saturation: 000, brightness: 5, alpha: 100)
-canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: 0, width: 300, height: 75)
-
-//big grey mountain one
 canvas.borderColor = Color(hue: 0, saturation: 0, brightness: 70, alpha: 100)
 canvas.lineColor = Color(hue: 0, saturation: 0, brightness: 70, alpha: 100)
 for xPos in stride(from: 0, to: 125, by:4){
-    canvas.drawLine(fromX: 0, fromY: 198, toX: xPos, toY: 75, lineWidth: 2)
+        canvas.drawLine(fromX: 0, fromY: 198, toX: xPos, toY: 75, lineWidth: 2)
 }
 
-//big grey mountain 2
+// Second Big Peak
 canvas.borderColor = Color(hue: 0, saturation: 0, brightness: 70, alpha: 100)
 canvas.lineColor = Color(hue: 0, saturation: 0, brightness: 70, alpha: 100)
 for xPos in stride(from: 0, to: 200, by:4){
-    canvas.drawLine(fromX: 100, fromY: 198, toX: xPos, toY: 75, lineWidth: 2)
+        canvas.drawLine(fromX: 100, fromY: 198, toX: xPos, toY: 100, lineWidth: 2)
+        
 }
 
-//big grey mountain 3
+// Third Big Peak
 canvas.borderColor = Color(hue: 0, saturation: 0, brightness: 70, alpha: 100)
 canvas.lineColor = Color(hue: 0, saturation: 0, brightness: 70, alpha: 100)
 for xPos in stride(from: 100, to: 300, by:4){
-    canvas.drawLine(fromX: 200, fromY: 198, toX: xPos, toY: 75, lineWidth: 2)
+        canvas.drawLine(fromX: 200, fromY: 198, toX: xPos, toY: 100, lineWidth: 2)
+    
 }
 
-//big grey mountain 4
+// Fourth big peak
 canvas.borderColor = Color(hue: 0, saturation: 0, brightness: 70, alpha: 100)
 canvas.lineColor = Color(hue: 0, saturation: 0, brightness: 70, alpha: 100)
-for xPos in stride(from: 200, to: 400, by:4){
-    canvas.drawLine(fromX: 300, fromY: 198, toX: xPos, toY: 75, lineWidth: 2)
+for xPos in stride(from: 200, to: 325, by:4){
+        canvas.drawLine(fromX: 300, fromY: 198, toX: xPos, toY: 100, lineWidth: 2)
+        
 }
 
-//small black mountain 1
-canvas.borderColor = Color(hue: 0, saturation: 0, brightness: 5, alpha: 100)
-canvas.lineColor = Color(hue: 0, saturation: 0, brightness: 5, alpha: 100)
-for xPos in stride(from: 0, to: 125, by:4){
-    canvas.drawLine(fromX: 0, fromY: 98, toX: xPos, toY: 50, lineWidth: 2)
+// Small Mountain Rectangle
+
+canvas.drawShapesWithBorders = false
+canvas.fillColor = Color(hue: 0, saturation: 000, brightness: 50, alpha: 100)
+canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: 0, width: 300, height: 75)
+
+// First small peak
+
+canvas.borderColor = Color(hue: 0, saturation: 0, brightness: 50, alpha: 100)
+canvas.lineColor = Color(hue: 0, saturation: 0, brightness: 50, alpha: 100)
+for xPos in stride(from: 0, to: 50, by:4){
+        canvas.drawLine(fromX: 0, fromY: 98, toX: xPos, toY: 50, lineWidth: 2)
 }
 
-//small black mountain 2
-canvas.borderColor = Color(hue: 0, saturation: 0, brightness: 5, alpha: 100)
-canvas.lineColor = Color(hue: 0, saturation: 0, brightness: 5, alpha: 100)
-for xPos in stride(from: 0, to: 175, by:4){
-    canvas.drawLine(fromX: 100, fromY: 98, toX: xPos, toY: 50, lineWidth: 2)
+// Second Small Peak
+canvas.borderColor = Color(hue: 0, saturation: 0, brightness: 50, alpha: 100)
+canvas.lineColor = Color(hue: 0, saturation: 0, brightness: 50, alpha: 100)
+for xPos in stride(from: 0, to: 100, by:4){
+        canvas.drawLine(fromX: 50, fromY: 98, toX: xPos, toY: 50, lineWidth: 2)
 }
 
-//small black mountain 3
-canvas.borderColor = Color(hue: 0, saturation: 0, brightness: 5, alpha: 100)
-canvas.lineColor = Color(hue: 0, saturation: 0, brightness: 5, alpha: 100)
-for xPos in stride(from: 0, to: 200, by:4){
-    canvas.drawLine(fromX: 200, fromY: 98, toX: xPos, toY: 50, lineWidth: 2)
+// Third Small Peak
+canvas.borderColor = Color(hue: 0, saturation: 0, brightness: 50, alpha: 100)
+canvas.lineColor = Color(hue: 0, saturation: 0, brightness: 50, alpha: 100)
+for xPos in stride(from: 50, to: 150, by:4){
+        canvas.drawLine(fromX: 100, fromY: 98, toX: xPos, toY: 50, lineWidth: 2)
 }
 
+// Fourth Small Peak
+canvas.borderColor = Color(hue: 0, saturation: 0, brightness: 50, alpha: 100)
+canvas.lineColor = Color(hue: 0, saturation: 0, brightness: 50, alpha: 100)
+for xPos in stride(from: 100, to: 200, by:4){
+        canvas.drawLine(fromX: 150, fromY: 98, toX: xPos, toY: 50, lineWidth: 2)
+}
+
+// Fifth Small Peak
+canvas.borderColor = Color(hue: 0, saturation: 0, brightness: 50, alpha: 100)
+canvas.lineColor = Color(hue: 0, saturation: 0, brightness: 50, alpha: 100)
+for xPos in stride(from: 150, to: 250, by:4){
+        canvas.drawLine(fromX: 200, fromY: 98, toX: xPos, toY: 50, lineWidth: 2)
+}
+
+// Sixth Small Peak
+canvas.borderColor = Color(hue: 0, saturation: 0, brightness: 50, alpha: 100)
+canvas.lineColor = Color(hue: 0, saturation: 0, brightness: 50, alpha: 100)
+for xPos in stride(from: 200, to: 300, by:4){
+        canvas.drawLine(fromX: 250, fromY: 98, toX: xPos, toY: 50, lineWidth: 2)
+}
+
+// Seventh Small Peak
+canvas.borderColor = Color(hue: 0, saturation: 0, brightness: 50, alpha: 100)
+canvas.lineColor = Color(hue: 0, saturation: 0, brightness: 50, alpha: 100)
+for xPos in stride(from: 250, to: 300, by:4){
+        canvas.drawLine(fromX: 300, fromY: 98, toX: xPos, toY: 50, lineWidth: 2)
+}
 PlaygroundPage.current.liveView = canvas.imageView
